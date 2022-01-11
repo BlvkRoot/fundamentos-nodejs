@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3333
 
+app.use(express.json());
+
 app.get('/courses', (request, response) => {
     return response.json(["Curso 1", "Curso 2", "Curso 3"]);
 });
